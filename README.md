@@ -10,7 +10,7 @@ Este proyecto es una web que muestra que fecha sería hoy si estuviera en vigor 
 El código JavaScript convierte la fecha actual en la fecha del calendario mundial, y tiene en cuenta las variaciones que suponen la existencia de días fuera del calendario (no pertenecen a ningún mes ni dia de la semana) y de años bisiestos.
 
 ## Tecnologías
-Stack (HTML/CSS/JS)
+El proyecto fue originalmente desarrollado utilizando html, css y js, y luego migrado a Astro.
 
 ## Estructura del proyecto
 Árbol de carpetas real (incluye assets/fonts), para que “vean” orden y modularidad.
