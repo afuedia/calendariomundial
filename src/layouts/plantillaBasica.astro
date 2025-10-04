@@ -1,0 +1,33 @@
+---
+const { titulo } = Astro.props;
+---
+<!DOCTYPE html>
+  
+<html lang="es">
+  <head>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+    </style>
+		<meta name="generator" content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/global.css" rel="stylesheet" type="text/css" media="all" />
+    <title>{titulo}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <slot />
+</body>
+</html>
+

@@ -64,12 +64,14 @@ let diaMes = diaOrdinal - inicioMes;
 
 diaSemana = diasSemana[(diaOrdinal - 1) % 7];
 diaSemanaB = diasSemana[(diaOrdinalB - 1) % 7];
+
 console.log(obtenerMes(diaOrdinal)); // Ejemplo: día ordinal 5
 console.log(mesMundial);
 console.log(inicioMes);
 console.log(diaMes);
 console.log(diaOrdinal);
 console.log(diaSemana);
+
 const fechaMundial = document.getElementById("hoy-es-si");
 if (esBisiesto(año)) {
   if (diaOrdinal < 183) {
