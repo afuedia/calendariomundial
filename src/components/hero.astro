@@ -38,7 +38,7 @@ const diaOrdinal = calcularDiaOrdinal(hoy);
 const diaOrdinalB = diaOrdinal - 1;
 const año = hoy.getFullYear();
 let inicioMes;
-let numeros = [];
+let numeros = [0, 31, 61, 91, 122, 152, 182, 213, 243, 273, 304, 334, 365];
 let diaSemana = "";
 let diaSemanaB = "";
 const diaExtra = document.getElementById("dia-extra");
@@ -49,11 +49,7 @@ function esBisiesto(año) {
 
 if (esBisiesto(año)) {
   numeros = [0, 31, 61, 91, 122, 152, 183, 214, 244, 274, 305, 335, 366];
-} else {
-  diaExtra.classList.toggle("oculto");
-  numeros = [0, 31, 61, 91, 122, 152, 182, 213, 243, 273, 304, 334, 365];
 }
-
 // Función para obtener el mes a partir del día ordinal
 function obtenerMes(diaOrdinal) {
   for (let i = 1; i < numeros.length; i++) {
