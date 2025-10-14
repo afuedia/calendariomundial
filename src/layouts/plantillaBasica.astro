@@ -1,26 +1,15 @@
 ---
+import BaseHead from "../components/BaseHead.astro"
 import "../styles/global.css"
-import { ClientRouter } from "astro:transitions";
-const { titulo } = Astro.props;
+
+const { titulo, descripcion } = Astro.props;
 ---
 <!DOCTYPE html>
   
 <html lang="es">
-  <head>
-    <ClientRouter />
-    <meta name="generator" content={Astro.generator} />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="/public/styles/reset.css" rel="stylesheet" type="text/css" media="all" /> -->
-    <title>{titulo}</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-  <slot />
-</body>
+  <BaseHead title={titulo} description={descripcion} />
+  <body>
+    <slot />
+  </body>
 </html>
 
