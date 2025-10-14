@@ -1,24 +1,17 @@
 ---
+import "../styles/global.css"
+import { ClientRouter } from "astro:transitions";
 const { titulo } = Astro.props;
 ---
 <!DOCTYPE html>
   
 <html lang="es">
   <head>
-    <style>
-      * {
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-}
-    </style>
-		<meta name="generator" content={Astro.generator} />
+    <ClientRouter />
+    <meta name="generator" content={Astro.generator} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../styles/global.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- <link href="/public/styles/reset.css" rel="stylesheet" type="text/css" media="all" /> -->
     <title>{titulo}</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">

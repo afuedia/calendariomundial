@@ -1,12 +1,18 @@
 ---
 import PlantillaBasica from "../layouts/plantillaBasica.astro";
 import Header from "../components/header.astro";
+import { Image, Picture } from 'astro:assets';
+import perpetuo from "../../src/assets/perpetuo.jpg"
 ---
 
 <PlantillaBasica titulo="Sobre mi" >
 <Header />
 
 <a href="/">Principal</a>
+<Image src={perpetuo} alt="Señora posa con calendario"/>
+
+<Picture src={perpetuo} formats={['avif', 'webp']} alt="Una descripción de mi imagen." layout='constrained' />
+
 
 
 </PlantillaBasica>
