@@ -3,9 +3,11 @@ import PlantillaBasica from "../layouts/plantillaBasica.astro";
 import Header from "../components/header.astro";
 import { Image, Picture } from 'astro:assets';
 import perpetuo from "../../src/assets/perpetuo.jpg"
+const titulo = "Sobre el Calendario Mundial"
+const descripcion = "Breve reseña sobre el Calendario Mundial"
 ---
 
-<PlantillaBasica titulo="Sobre mi" >
+<PlantillaBasica titulo={titulo} descripcion={descripcion} >
 <Header />
 
 <a href="/">Principal</a>
