@@ -25,4 +25,4 @@ Lighthouse da un 99 en rendimiento, señala algo respecto a la carga de las fuen
 En una primera versión, manejo de la etiqueta <table> en HTML + uso de Date() en JavaScript
 
 ## Diferencias vs. Calendario de Achelis
-Mi trabajo no se basa 100% en el Calendario de Achelis, dado que el mismo empieza la semana en domingo y esta versión del Calendario Mundial empieza su semana en lunes, y por lo tanto también hace que los 1 de Enero caigan en lunes
+Mi trabajo no se basa 100% en el Calendario de Achelis, dado que el mismo empieza la semana en domingo y esta versión del Calendario Mundial, siguiendo la norma ISO 8601, empieza la semana en lunes, y por lo tanto también hace que los 1 de Enero caigan en lunes.
