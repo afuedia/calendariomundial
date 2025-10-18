@@ -53,26 +53,33 @@ const descripcion = "Breve reseña sobre el Calendario Mundial"
 
 <style>
 article {
-    /* 📱 Estilos base: móvil (≤600px) */
-    h2, h3 {
-      color: #8b008b;
-      margin-block: 1rem;
-    }
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    /* 📲 Tablet: 601px – 1024px */
-    @media (min-width: 601px) and (max-width: 1024px) {
-    } 
-    /* 💻 Desktop: ≥1025px */
-    @media (min-width: 1025px) {
-     
-    }
+   /* 📱 Estilos base: móvil (≤600px) */
+      max-inline-size: clamp(45ch, 60ch + 5vw, 75ch);
+      line-height: 1.5;
+      margin-inline: auto;
+      padding-inline: 1rem;pnpm 
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      
+    
+  /* 📲 Tablet: 601px – 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+  } 
+  /* 💻 Desktop: ≥1025px */
+  @media (min-width: 1025px) {
+   
   }
+}
+
 figure {
   margin: 1rem;
 }  
 figcaption {
   text-align: end;
 }
+h2, h3 {
+          color: #8b008b;
+          margin-block: 1rem;
+        }
 </style>

@@ -53,4 +53,12 @@ body{
   background: var(--fondo);
   color: var(--texto);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    font-size: 18px;
+  } 
+  
+  @media (min-width: 1025px) {
+   font-size: 20px;
+  }
 }
