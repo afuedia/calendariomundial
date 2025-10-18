@@ -5,10 +5,20 @@
 </main>
 
 <style>
-    .main {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  background-color: #8b008b;
-}
+ .main {
+    /* 📱 Estilos base: móvil (≤600px) */
+    background-color: #8b008b;
+    display: flex;
+    flex-direction: column;
+    /* 📲 Tablet: 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+    /* 💻 Desktop: ≥1025px */
+    @media (min-width: 1025px) {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+    }
+  }
+
 </style>

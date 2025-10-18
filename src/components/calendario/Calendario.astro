@@ -1,0 +1,66 @@
+---
+import Trimestre from "./trimestre.astro"
+---
+<div class="calendario">     
+  <p id="year"></p>
+  <div class="calendario__div">
+    <Trimestre mesUno="Enero" mesDos="Febrero" mesTres="Marzo" />
+    <Trimestre mesUno="Abril" mesDos="Mayo" mesTres="Junio" />
+    <Trimestre mesUno="Julio" mesDos="Agosto" mesTres="Septiembre" />
+    <Trimestre mesUno="Octubre" mesDos="Noviembre" mesTres="Diciembre" />
+  </div>
+</div> 
+
+<style>
+  .calendario {
+    /* 📱 Estilos base: móvil (≤600px) */
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    /* 📲 Tablet: 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+    /* 💻 Desktop: ≥1025px */
+    @media (min-width: 1025px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      position: relative;
+      margin-top: 0.1rem;
+      right: 3rem;
+    }
+  }
+  .calendario__p {
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    font-family: "Playfair Display";  
+  }
+  .calendario__div {
+    /* 📱 Estilos base: móvil (≤600px) */
+      font-family: lato;
+      background-color: #f9f9f9;
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    /* 📲 Tablet: 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+     
+    } 
+    /* 💻 Desktop: ≥1025px */
+    @media (min-width: 1025px) {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+  }
+</style>
+
+

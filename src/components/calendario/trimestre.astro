@@ -1,0 +1,228 @@
+---
+import DiasSemana from "./DiasSemana.astro"
+const { mesUno, mesDos, mesTres } = Astro.props
+---
+
+<section class="mes">
+  <table class="mes__table">
+    <caption class="mes__caption">
+      {mesUno}
+    </caption>
+    <DiasSemana />
+    <tbody>
+      <tr>
+        <td class="mes__dia"><time>1</time></td>
+        <td class="mes__dia"><time>2</time></td>
+        <td class="mes__dia"><time>3</time></td>
+        <td class="mes__dia"><time>4</time></td>
+        <td class="mes__dia"><time>5</time></td>
+        <td class="mes__dia"><time>6</time></td>
+        <td class="mes__dia"><time>7</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>8</time></td>
+        <td class="mes__dia"><time>9</time></td>
+        <td class="mes__dia"><time>10</time></td>
+        <td class="mes__dia"><time>11</time></td>
+        <td class="mes__dia"><time>12</time></td>
+        <td class="mes__dia"><time>13</time></td>
+        <td class="mes__dia"><time>14</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>15</time></td>
+        <td class="mes__dia"><time>16</time></td>
+        <td class="mes__dia"><time>17</time></td>
+        <td class="mes__dia"><time>18</time></td>
+        <td class="mes__dia"><time>19</time></td>
+        <td class="mes__dia"><time>20</time></td>
+        <td class="mes__dia"><time>21</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>22</time></td>
+        <td class="mes__dia"><time>23</time></td>
+        <td class="mes__dia"><time>24</time></td>
+        <td class="mes__dia"><time>25</time></td>
+        <td class="mes__dia"><time>26</time></td>
+        <td class="mes__dia"><time>27</time></td>
+        <td class="mes__dia"><time>28</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>29</time></td>
+        <td class="mes__dia"><time>30</time></td>
+        <td class="mes__dia"><time>31</time></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+        
+<section class="mes">
+  <table class="mes__table">
+    <caption class="mes__caption">
+      {mesDos}
+    </caption>
+    <DiasSemana />
+    <tbody>
+      <tr>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia"><time>1</time></td>
+        <td class="mes__dia"><time>2</time></td>
+        <td class="mes__dia"><time>3</time></td>
+        <td class="mes__dia"><time>4</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>5</time></td>
+        <td class="mes__dia"><time>6</time></td>
+        <td class="mes__dia"><time>7</time></td>
+        <td class="mes__dia"><time>8</time></td>
+        <td class="mes__dia"><time>9</time></td>
+        <td class="mes__dia"><time>10</time></td>
+        <td class="mes__dia"><time>11</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>12</time></td>
+        <td class="mes__dia"><time>13</time></td>
+        <td class="mes__dia"><time>14</time></td>
+        <td class="mes__dia"><time>15</time></td>
+        <td class="mes__dia"><time>16</time></td>
+        <td class="mes__dia"><time>17</time></td>
+        <td class="mes__dia"><time>18</time></td>
+      </tr>
+      <tr>
+        <td><time class="mes__dia">19</time></td>
+        <td><time class="mes__dia">20</time></td>
+        <td><time class="mes__dia">21</time></td>
+        <td><time class="mes__dia">22</time></td>
+        <td><time class="mes__dia">23</time></td>
+        <td><time class="mes__dia">24</time></td>
+        <td><time class="mes__dia">25</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>26</time></td>
+        <td class="mes__dia"><time>27</time></td>
+        <td class="mes__dia"><time>28</time></td>
+        <td class="mes__dia"><time>29</time></td>
+        <td class="mes__dia"><time>30</time></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="mes">
+  <table class="mes__table">
+    <caption class="mes__caption">
+      {mesTres}
+    </caption>
+    <DiasSemana />
+    <tbody>
+      <tr>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia mes__dia--vacio"></td>
+        <td class="mes__dia"><time>1</time></td>
+        <td class="mes__dia"><time>2</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>3</time></td>
+        <td class="mes__dia"><time>4</time></td>
+        <td class="mes__dia"><time>5</time></td>
+        <td class="mes__dia"><time>6</time></td>
+        <td class="mes__dia"><time>7</time></td>
+        <td class="mes__dia"><time>8</time></td>
+        <td class="mes__dia"><time>9</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>10</time></td>
+        <td class="mes__dia"><time>11</time></td>
+        <td class="mes__dia"><time>12</time></td>
+        <td class="mes__dia"><time>13</time></td>
+        <td class="mes__dia"><time>14</time></td>
+        <td class="mes__dia"><time>15</time></td>
+        <td class="mes__dia"><time>16</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>17</time></td>
+        <td class="mes__dia"><time>18</time></td>
+        <td class="mes__dia"><time>19</time></td>
+        <td class="mes__dia"><time>20</time></td>
+        <td class="mes__dia"><time>21</time></td>
+        <td class="mes__dia"><time>22</time></td>
+        <td class="mes__dia"><time>23</time></td>
+      </tr>
+      <tr>
+        <td class="mes__dia"><time>24</time></td>
+        <td class="mes__dia"><time>25</time></td>
+        <td class="mes__dia"><time>26</time></td>
+        <td class="mes__dia"><time>27</time></td>
+        <td class="mes__dia"><time>28</time></td>
+        <td class="mes__dia"><time>29</time></td>
+        <td class="mes__dia"><time>30</time></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<style>
+.mes {
+    /* 📱 (≤600px) */
+    display: flex;
+    /* 📲 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+    /* 💻 ≥1025px */
+    @media (min-width: 1025px) {
+      max-width: 100%;
+      margin-top: 10px;
+      
+    }}
+       
+.mes__table {
+      width: 80%;
+      margin: auto;
+      tbody {
+        background-color: white;
+      }
+    }
+tr {
+  max-width: 100%;
+}
+.mes__caption {
+      background-color: #8b008b;
+      color: white;
+}
+
+.mes__dia {
+  /* 📱 (≤600px) */
+  
+  /* 📲 601px – 1024px */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+  /* 💻 ≥1025px */
+  @media (min-width: 1025px) {
+    text-align: center;
+    margin-top: 0.01rem;
+    margin-left: 0.02rem;
+    margin-right: 0.02rem;
+    font-size: 0.8rem;
+    font-weight: 1000;
+    padding: 0.1rem;
+  }
+}
+
+.mes__dia--vacio {
+  background-color: #f9f9f9;
+  }
+
+
+        </style>
+
+        

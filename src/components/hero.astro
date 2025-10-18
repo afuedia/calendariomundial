@@ -1,38 +1,107 @@
 ---
-import Trimestre from "./trimestre.astro"
+import Calendario from "./calendario/Calendario.astro"
 ---
     
-    <div class="entrada-izquierda">
-            <div class="hoy-es-si"><p>Hoy es</p><span id="hoy-es-si"></span></div>
-            <div class="titulo-container">
-                <p class="pre-titulo">según el</p>
-                <h1 class="titulo">Calendario Mundial</h1></div>
-        
-          <div class="palique">
-            <p>¿Imaginas un calendario simple, ordenado y equilibrado?</p>
-            <p>El Calendario Mundial es una propuesta diseñada para superar
-            el calendario actual, simplificando nuestro sistema de tiempo.</p>
-            <a class="boton-inside" href="">Descubrir más</a>
-            
-          </div>           
-        </div>
-     <div class="entrada-derecha">     
-            <p id="year"></p>
-      <div class="calendario-chico">
-        
-        <Trimestre mesUno="Enero" mesDos="Febrero" mesTres="Marzo" />
-        <Trimestre mesUno="Abril" mesDos="Mayo" mesTres="Junio" />
-        <Trimestre mesUno="Julio" mesDos="Agosto" mesTres="Septiembre" />
-        <Trimestre mesUno="Octubre" mesDos="Noviembre" mesTres="Diciembre" />
-        
-      </div>
-    </div> 
+<div class="hero">
+  <hgroup class="hero__hgroup">
+    <h1><span>Hoy es</span> <time id="hoy-es-si"></time></h1>
+    <p>según el</p>
+    <cite>Calendario Mundial</cite>
+  </hgroup>
+  
+  <div class="hero__textos">
+      <p>¿Imaginas un calendario simple, ordenado y equilibrado?</p>
+      <p>El Calendario Mundial es una propuesta diseñada para superar
+      el calendario actual, simplificando nuestro sistema de tiempo.</p>
+      
+  </div> 
+  <a class="hero__a" href="">Descubrir más</a>          
+</div>
+<Calendario />
+
+
+
+
+<style>
+  .hero {
+    /* 📱 Estilos base: móvil (≤600px) */
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+
+
+    /* 📲 Tablet: 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+    /* 💻 Desktop: ≥1025px */
+    @media (min-width: 1025px) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .hero__hgroup {
+    margin-bottom: 1rem;
+    span {
+      display: block;
+      font-size: 1rem;
+    }
+    cite {
+      font-size: 2rem;
+    }
+  }
+
+  .hero__a {
+    background-color: #eb5d1e;
+    display: inline-block;
+    text-align: center;
+    text-justify: center;
+    color: #f9f9f9;
+    font-family: "Playfair Display";
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 3rem;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+
+
+
+#hoy-es-no {
+  text-decoration: line-through;
+}
+
+#hoy-es-si {
+  font-size: 2rem;
+}
+
+.hoy-es-si p {
+  font-size: 1rem;
+}
+
+
+
+</style>
+
 <script>
   function calcularDiaOrdinal(fecha) {
   const diaUno = new Date(fecha.getFullYear(), 0, 1);
   const diferenciaMs = fecha - diaUno;
   return Math.floor(diferenciaMs / (1000 * 60 * 60 * 24)) + 1;
 }
+
 const hoy = new Date();
 const diaOrdinal = calcularDiaOrdinal(hoy);
 const diaOrdinalB = diaOrdinal - 1;
@@ -61,28 +130,16 @@ function obtenerMes(diaOrdinal) {
   return null;
 }
 const diasSemana = [
-  "Lunes",
-  "Martes",
-  "Miércoles",
-  "Jueves",
-  "Viernes",
-  "Sábado",
+  "Lunes",  "Martes",   "Miércoles",
+  "Jueves",   "Viernes",   "Sábado",
   "Domingo",
 ];
 
 const nombreMeses = [
-  "Enero",
-  "Febrero",
-  "Marzo",
-  "Abril",
-  "Mayo",
-  "Junio",
-  "Julio",
-  "Agosto",
-  "Septiembre",
-  "Octubre",
-  "Noviembre",
-  "Diciembre",
+  "Enero",   "Febrero",   "Marzo",
+  "Abril",   "Mayo",   "Junio",
+  "Julio",   "Agosto",   "Septiembre",
+  "Octubre",   "Noviembre",   "Diciembre",
 ];
 
 let mesMundial = nombreMeses[obtenerMes(diaOrdinal) - 1];
@@ -111,136 +168,3 @@ if (esBisiesto(año)) {
   }
 }
 </script>
-<style>
-
-.entrada-izquierda {
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  padding: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .entrada-izquierda {
-    width: 100%;
-    height: 100vh;
-    .hoy-es-si {
-      margin-inline: 2rem;
-    }
-    .titulo-container {
-      
-      .titulo {
-        margin-inline: 2rem;
-      }
-    }
-    .palique a {
-      width: auto;
-    }
-  }
-}
-
-.titulo-container {
-  margin: 1rem;
-}
-.pre-titulo {
-  justify-self: center;
-}
-.titulo {
-  font-size: 3rem;
-  font-family: "Playfair Display";
-}
-
-.palique {
-  font-size: 1.1rem;
-  margin: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.palique h3 {
-  text-align: center;
-  margin-bottom: 0.8rem;
-}
-
-.palique a {
-  background-color: #eb5d1e;
-  display: inline-block;
-  width: 20%;
-  height: 160%;
-  text-align: center;
-  text-justify: center;
-  color: #f9f9f9;
-  font-family: "Playfair Display";
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 3rem;
-  justify-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-#hoy-es-no {
-  text-decoration: line-through;
-}
-
-#hoy-es-si {
-  font-size: 2rem;
-}
-
-.hoy-es-si p {
-  font-size: 1rem;
-}
-.entrada-derecha {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  position: relative;
-  margin-top: 0.1rem;
-  right: 3rem;
-}
-@media (max-width: 768px) {
-  .entrada-derecha {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    right: 0;
-  }
-}
-#year {
-  font-size: 2.5rem;
-  color: #f9f9f9;
-  font-family: "Playfair Display";
-}
-
-.calendario-chico {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-family: lato;
-  background-color: #f9f9f9;
-  padding-left: 2rem;
-  margin-top: 1rem;
-}
-@media (max-width: 768px) {
-  .calendario-chico {
-    grid-template-columns: repeat(1, 1fr);
-    padding-left: 0;
-    justify-items: center;
-    justify-content: center;
-  }
-}
-
-</style>
