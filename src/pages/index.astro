@@ -4,17 +4,15 @@ import Header from "../components/header.astro";
 import Main from "../components/main.astro"
 import Footer from "../components/footer.astro";
 import Hero from "../components/hero.astro";
-console.log("Hola")
-
+const titulo = "Calendario Mundial"
+const descripcion = "Web para la promoción del Calendario Mundial"
 ---
 
-<PlantillaBasica titulo="Home" descripcion="La pagina que te dice que día sería si..." >
-
+<PlantillaBasica titulo={titulo} descripcion={descripcion} >
   <Header />
   <Main >
     <Hero />
   </Main>
   <Footer />
-
 </PlantillaBasica>
 

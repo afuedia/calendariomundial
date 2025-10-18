@@ -3,6 +3,7 @@ import PlantillaBasica from "../layouts/plantillaBasica.astro";
 import Header from "../components/header.astro";
 import { Image, Picture } from 'astro:assets';
 import perpetuo from "../../src/assets/perpetuo.jpg"
+import fuentes from "../../src/assets/fuentes.png"
 const titulo = "Sobre el Calendario Mundial"
 const descripcion = "Breve reseña sobre el Calendario Mundial"
 ---
@@ -10,11 +11,68 @@ const descripcion = "Breve reseña sobre el Calendario Mundial"
 <PlantillaBasica titulo={titulo} descripcion={descripcion} >
 <Header />
 
-<a href="/">Principal</a>
-<Image src={perpetuo} alt="Señora posa con calendario"/>
 
-<Picture src={perpetuo} formats={['avif', 'webp']} alt="Una descripción de mi imagen." layout='constrained' />
+<article>
 
+  <h2>Antecedentes: calendarios juliano y gregoriano</h2>
+  <p>
+    El <strong>calendario juliano</strong>, introducido por Julio César en el 46&nbsp;a.&nbsp;C., fijó años de 365 días con un día adicional cada cuatro, lo que daba una media de 365,25 días. Esa aproximación sobrestima ligeramente la duración del año trópico (unos 365,2422 días), de modo que, con el tiempo, el calendario se adelantaba respecto a las estaciones. Para corregir el desfase, en 1582 el papa Gregorio&nbsp;XIII promulgó el <strong>calendario gregoriano</strong>, que suprimió diez días y refinó la regla de los bisiestos: los años divisibles por 4 lo son, salvo los seculares, que solo cuentan como bisiestos si son divisibles por 400. Desde entonces, el gregoriano es el estándar civil dominante, con un error medio muy pequeño frente al año solar.
+  </p>
+  <h2>Propuestas de reforma del calendario</h2>
+  <p>
+    A lo largo de la historia se registra experimentos sociales que trataron, sin éxito, superar el calendario gregoriano. La Francia revolucionaria (1793–1805) reemplazó la semana de siete días por “décadas” de diez, dentro de doce meses de treinta días más los complementarios; el <em>décadi</em> era el día de descanso y se intentó incluso la hora decimal.</p>
+    <p>En la Unión Soviética, entre 1929 y 1940 se ensayaron semanas laborales de cinco y luego de seis días, con descansos rotativos por colores, manteniendo sin embargo los meses gregorianos. Ambos proyectos buscaban romper con ritmos religiosos y optimizar la producción, pero acabaron revirtiéndose por su fricción con la vida cotidiana y las redes internacionales: la semana de siete días demostró una resiliencia cultural e institucional enorme.</p>
+  </p>
+  <h2>Los calendarios perpetuos</h2>
+  <p>
+    Un <strong>calendario perpetuo</strong> es cualquier método —mecánico, gráfico o algorítmico— que permite determinar el día de la semana de una fecha pasada o futura sin depender de un almanaque anual. En relojería, la “complicación” perpetua corrige automáticamente los meses de 30 y 31 días y los febreros bisiestos. En el terreno matemático, reglas como la congruencia de Zeller o el método <em>Doomsday</em> de John Conway hacen el mismo trabajo con cálculos mentales. Detrás de estas herramientas late una misma idea: fijar patrones estables que vuelvan predecible la cuadrícula del tiempo.
+  </p>
+  <p>
+    Precisamente por ese afán de regularidad surgieron propuestas de <em>reforma</em> calendaría que buscan que cada año se parezca al anterior. Dos modelos de referencia son el <strong>Calendario Fijo Internacional</strong> y el <strong>World Calendar</strong> de Achelis. Ambos logran que una fecha dada caiga siempre en el mismo día de la semana cada año; su diferencia principal es estética y organizativa: el Fijo Internacional homogeneiza todos los meses a 28 días, mientras que el World Calendar conserva nombres y longitudes cercanas a las actuales.
+  </p>
 
+  
+  <h2>El calendario mundial de Elisabeth Achelis</h2>
+  <Picture src={perpetuo} formats={['avif', 'webp']} alt="Elisabeth Achelis presentando su reforma del calendario en el siglo XX"/>
+  <p>
+    La divulgadora estadounidense <strong>Elisabeth Achelis</strong> impulsó desde los años 30 el llamado <em>World Calendar</em>. Su año se divide en cuatro trimestres idénticos de 91 días, siguiendo el patrón 31–30–30. Al final de diciembre se inserta un <em>Worldsday</em> que no pertenece a ningún día de la semana y, en años bisiestos, un <em>Leapyear Day</em> tras el 30 de junio, también fuera del ciclo semanal. Con esta construcción, cada fecha se alinea siempre con el mismo día de la semana y cada trimestre es comparable al anterior. Achelis concebía las semanas comenzando en <strong>domingo</strong>, lo que, junto con los “días fuera de semana”, generó objeciones por interrumpir el conteo ininterrumpido de siete días valorado por varias tradiciones religiosas. Aun así, su propuesta tuvo apoyo técnico y llegó a debatirse en foros internacionales.
+  </p>
 
+  <h2>El Calendario Mundial de Antonio Fuentes</h2>
+  <figure>
+<Picture src={fuentes} formats={['avif', 'webp']} alt="Antonio Fuentes presentando su propuesta de reforma del calendario en una charla TED" />
+<figcaption>Antonio Fuentes presentando su propuesta de reforma</figcaption>
+  </figure>
+  
+  <p>
+    El llamado <strong>Calendario Mundial de Antonio Fuentes</strong> es, en realidad, una broma o “quedada” sin estatus académico. Si se definiera como reforma, sería esencialmente el World Calendar de Achelis con una única variación de convención: <strong>la semana arranca en lunes</strong>, siguiendo la recomendación de <abbr title="Norma internacional para la representación de fechas y horas">ISO&nbsp;8601</abbr> para el uso civil y la numeración de semanas. Esta variante preserva los cuatro trimestres idénticos, el <em>Worldsday</em> al final de diciembre y el día bisiesto tras junio, pero reencuadra la cuadrícula semanal para alinearla con prácticas contemporáneas en administración, contabilidad y tecnología. En la práctica, ofrecería las mismas ventajas de previsibilidad y comparación que el diseño original, con el añadido de una integración más directa con los sistemas que ya tratan el lunes como primer día hábil. Sus desafíos serían los comunes a cualquier reforma global: compatibilidad con calendarios religiosos y legales, migración de estándares y software, y el coste de transición.
+  </p>
+
+</article>
 </PlantillaBasica>
+
+<style>
+article {
+    /* 📱 Estilos base: móvil (≤600px) */
+    h2, h3 {
+      color: #8b008b;
+      margin-block: 1rem;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    /* 📲 Tablet: 601px – 1024px */
+    @media (min-width: 601px) and (max-width: 1024px) {
+    } 
+    /* 💻 Desktop: ≥1025px */
+    @media (min-width: 1025px) {
+     
+    }
+  }
+figure {
+  margin: 1rem;
+}  
+figcaption {
+  text-align: end;
+}
+</style>
